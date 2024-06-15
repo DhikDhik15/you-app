@@ -24,13 +24,13 @@
 ## Installation
 
 ```bash
-yarn install
+npm install
 ```
 
 ## Installation
 
 ```bash
-yarn husky install
+npm husky install
 chmod ug+x .husky/*
 ```
 
@@ -39,77 +39,32 @@ chmod ug+x .husky/*
 ### development
 
 ```bash
-yarn run start
+npm run start
 ```
 
 ### watch mode
 
 ```bash
-yarn run start:dev
+npm run start:dev
 ```
 
 ### production mode
 
 ```bash
-yarn run start:prod
+npm run start:prod
 ```
 
 ## Running the app with Docker
 
-### Local Development
-
-```
-docker build --no-cache -f Dockerfile.local .
-docker-compose -f docker-compose.local.yml up --build -d
-```
-
-### Production
-
-```
-docker-compose build --no-cache
-docker-compose up --build -d
-```
-
-### Accessing container shell
-
-```
-docker exec -it myapp sh
-```
-
-```
-docker exec -it redis sh
-redis-cli
-```
-
-```
-docker exec -it mongodb sh
-mongosh
-```
-
 ## Seed role to MongoDB
 
 ```bash
-yarn nestjs-command seed:role
+npx nestjs-command seed:role
 ```
 
 ## File Storage
 
 - Local (Set Storage to 'local' in .env)
-
-```
-STORAGE=local
-S3_ENDPOINT_URL=https://sgp1.digitaloceanspaces.com/
-S3_DOWNLOAD_URL=https://<your-bucket>.sgp1.digitaloceanspaces.com/
-S3_BUCKET=<your-bucket>
-S3_ACCESS_KEY_ID=<your-access-key>
-S3_SECRET_KEY=<your-secret-key>
-```
-
-- S3 (Set Storage to 's3' in .env)
-
-```
-STORAGE=s3
-```
 
 ## API Documentation
 
@@ -138,15 +93,3 @@ yarn run test:e2e
 ```bash
 yarn run test:cov
 ```
-
-## Frontend Support
-
-You can use this [Project](https://github.com/ryanf10/ts-nextjs-tailwind-hoc-starter) as your frontend. It created with Next.js, Tailwind CSS, and Typescript.
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## License
-
-Nest is [MIT licensed](LICENSE).
